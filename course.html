@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddle Tribe Surf Club</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        .scroll-container {
+            height: 100vh;
+            place-items: center;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scrollbar-width: none;
+        }
+        .scroll-section {
+            display: flex;
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+        .menu-btn {
+            display: none;
+        }
+        .menu-btn:checked ~ .menu {
+            display: block;
+        }
+        .menu-btn:checked ~ .menu-icon .open {
+            display: none;
+        }
+        .menu-btn ~ .menu-icon .close {
+            display: none;
+        }
+        .menu-btn:checked ~ .menu-icon .close {
+            display: block;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+        }
+        .menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: black;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        @media (min-width: 768px) {
+            .menu {
+                display: flex;
+                position: static;
+                box-shadow: none;
+                width: auto;
+            }
+            .menu a {
+                padding: 0;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans leading-normal">
+    
+    <!-- Navigation -->
+    <nav class="p-4 text-black fixed top-0 left-0 w-full z-50 bg-white">
+        <div class="container flex justify-between items-center">
+            <span class="text-2xl text-gray-800">Paddle Tribe Surf Club</span>
+            <input type="checkbox" id="menu-btn" class="menu-btn hidden">
+
+            <label for="menu-btn" class="cursor-pointer md:hidden block menu-icon">
+                <svg class="w-6 h-6 open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg class="w-6 h-6 close" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+
+            <div class="menu md:flex md:items-center">
+                <a href="index.html" class="block md:inline-block">Home</a>
+                <a href="about.html" class="block md:inline-block">About</a>
+                <a href="course.html" class="block md:inline-block">Courses</a>
+                <a href="contact.html" class="block md:inline-block">Contact Us</a>
+                <a href="faq.html" class="block md:inline-block">F.A.Q</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="mx-auto scroll-container pb-0">
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24 italic ">
+                    <b>One day surf lessons ( Surfing 1O1 )</b><br/>
+                    As the name indicates, it's the introduction to surfing. How do you begin the surfing journey? What are the  regulations regarding it. How to stand on the board and board safety some basic techniques of surfing.
+
+                    <div>
+                        <b>Cost :</b> ₹ 1800 /-<br/>
+                        <small>Camping for single day 400 + surf session 1800 = 2200</small>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24 italic ">
+                    <b>Beginner surfing (3 day surf lessons)</b><br/>
+                    Beginner  surfing consists of catching waves with making sure your safety while riding waves.
+                    Working your way into standing on the board. Working on your postures while riding waves, following basic techniques of surfing.
+                    <div>
+                        <b>Inclusions:</b> brunch<br/>
+                        <b>Cost:</b> 5200/- <br/>
+                        <small>Camping for 2 nights(400*2) + surf session (5200) = 6000-</small>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24 italic ">
+                    <b>Experience surfing(5 days surf lessons)</b><br/>
+                    Experience surfing is a brief introduction into surfing, how to ride unbroken waves, how to paddle into waves. Knowing more about waves and surfing.
+                    <div>
+                        <b>Inclusions:</b> brunch<br/>
+                        <b>Cost:</b> 5200/- <br/>
+                        <small>Camping for 4 nights(400*4)+cost:8000=9600/</small>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24 italic ">
+                    <b>NOTE</b><br/>
+                    Check in one day prior to session and early morning checking are accepted as surf sessions start at 6.30 by morning.<br/><br/>
+            
+                    <b>Essential to carry while surfing</b><br/>
+                    Rashguards, hat, water bottle, electrolyte, dry towel, sunscreen , required medication if one is consuming.<br/>
+                </div>
+            </div>  
+        </div>
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24 italic ">
+                    <b>Cancellations:</b><br/>
+                    After a booking is confirmed, you have the option to reschedule your trip to any future date, subject to availability, or transfer the booking to someone else. We enforce a strict no-cancellation policy, so we kindly ask that you make your reservation only if you are certain about your travel plans.<br/>
+                    Rescheduling your trip is completely free, Depends on slots availability and on special occasions where prices may be different.<br/><br/>
+                    
+                    <b>Refunds:</b><br/>
+                    We have a strict "NO CANCELLATIONS OR REFUNDS" policy in place. Please ensure that you are fully committed to your trip before making a booking, as we do not process any refund requests.<br/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

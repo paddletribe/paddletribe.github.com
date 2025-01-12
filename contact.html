@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paddle Tribe Surf Club</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        .scroll-container {
+            height: 100vh;
+            place-items: center;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            scrollbar-width: none;
+        }
+        .scroll-section {
+            display: flex;
+            scroll-snap-align: start;
+            height: 100vh;
+        }
+        .menu-btn {
+            display: none;
+        }
+        .menu-btn:checked ~ .menu {
+            display: block;
+        }
+        .menu-btn:checked ~ .menu-icon .open {
+            display: none;
+        }
+        .menu-btn ~ .menu-icon .close {
+            display: none;
+        }
+        .menu-btn:checked ~ .menu-icon .close {
+            display: block;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+        }
+        .menu a {
+            display: block;
+            padding: 1rem;
+            text-decoration: none;
+            color: black;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        @media (min-width: 768px) {
+            .menu {
+                display: flex;
+                position: static;
+                box-shadow: none;
+                width: auto;
+            }
+            .menu a {
+                padding: 0;
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans leading-normal">
+    
+    <!-- Navigation -->
+    <nav class="p-4 fixed text-black top-0 left-0 w-full z-50 bg-white">
+        <div class="container flex justify-between items-center">
+            <span class="text-2xl text-gray-800">Paddle Tribe Surf Club</span>
+            <input type="checkbox" id="menu-btn" class="menu-btn hidden">
+
+            <label for="menu-btn" class="cursor-pointer md:hidden block menu-icon">
+                <svg class="w-6 h-6 open" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg class="w-6 h-6 close" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </label>
+
+            <div class="menu md:flex md:items-center">
+                <a href="index.html" class="block md:inline-block">Home</a>
+                <a href="about.html" class="block md:inline-block">About</a>
+                <a href="course.html" class="block md:inline-block">Courses</a>
+                <a href="contact.html" class="block md:inline-block">Contact Us</a>
+                <a href="faq.html" class="block md:inline-block">F.A.Q</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="mx-auto scroll-container pb-0">
+
+        <div class="scroll-section px-5 border-b-2 flex">
+            <div class="container mt-auto mb-0">
+                <div class="text-gray-600 leading-relaxed mb-24">
+                    <h3><b>How to Reach Us ?</b></h3>
+                    <ul class="list-disc pl-5">
+                        <li>
+                            Our Paddle Tribe Surf Club is located at the campsite named Ocean Scenery at Nirvana Beach. Nirvana Beach can be accessed from both Kumta and Gokarna.
+                        </li>
+                        <li>
+                            To reach from Kumta, one can take a bus to Aghanashini or Mosalesal. Get down at the Nirvana Beach stop (Kagal Kannada Shale). From there, you can take an auto or, alternatively, you can take an auto directly to Ocean Scenery Nirvana Beach from Kumta itself.
+                        </li>
+                        <li>
+                            From Gokarna, reach the Tadadi Port, where you can take a ferry (boat ride) to Aghanashini. From there, you can take an auto or public transportation to Nirvana Beach.
+                        </li>
+                        <li>
+                            <small>Note: Ferry boat carries only  people and 2 wheelers.</small>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+
+</body>
+</html>
